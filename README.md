@@ -29,4 +29,4 @@ CompTIA Security+ // CompTIA Network+ // CompTIA A+ // BTL1
 
 ## Links
 
-[LinkedIn](https://linkedin.com/in/devonbooker)
+[LinkedIn](https://linkedin.com/in/devonbookerr)

@@ -1,32 +1,51 @@
 # Devon Booker
 
-Security Analyst at Arctic Wolf Networks. Building and securing Microsoft 365 + Azure environments.
+Cloud security engineer building and securing Microsoft 365 + Azure environments.
 
-Finishing my B.S. in Cybersecurity at WGU (Sep 2026). Studying for AZ-900 next.
+Security Analyst at Arctic Wolf Networks, working enterprise SOC operations while building production-grade cloud infrastructure from scratch. Finishing B.S. Cybersecurity at WGU (Sep 2026).
 
-## What I'm Building
+My focus is the intersection of identity security, cloud infrastructure, and automation - the three areas that determine whether an organization gets breached or doesn't.
 
-**The Fortress** - A production-grade M365 + Azure + Linux + MySQL environment built from scratch. Hub-and-spoke VNet topology, Conditional Access policy sets, PIM configurations, Ubuntu Server hardened to CIS benchmarks, MySQL backend tracking every architectural decision. Not a sandbox - a documented, maintained environment I use to test everything I learn.
+---
 
-**M365 Security Assessment Engine** - PowerShell module that connects to Entra ID tenants via Graph API, collects identity security configurations, scores them against a baseline, stores findings in MySQL, and generates remediation reports via Python. Data collection, scoring logic, and report generation across three languages.
+## Active Projects
 
-**The Watchtower** - Azure Sentinel detection lab with custom analytic rules mapped to MITRE ATT&CK. Identity-focused detections (impossible travel, MFA fatigue, privilege escalation), Linux detections (SSH brute force, cron persistence), and automated response playbooks via Logic Apps.
+### [The Fortress](https://github.com/devonbookerrr/the-fortress)
+A production-grade M365 + Azure + Linux environment built from scratch and maintained as a living portfolio. Hub-and-spoke VNet topology with Azure Firewall. Entra ID with Conditional Access policy sets deployed via Graph API and PIM eligible-only role configuration. Ubuntu Server 24.04 hardened to CIS Level 2. MySQL backend tracking every architectural decision, configuration state, and compliance finding. Every cert I study and every technique I learn gets applied here first.
+
+### [M365 Security Assessment Engine](https://github.com/devonbookerrr/assessment-engine)
+PowerShell collectors query Entra ID tenants via Graph API and Exchange Online Management across five security domains: identity, privileged access, authentication, Exchange, and device compliance. A Python scoring engine evaluates each control, calculates a 0-100 score, and writes findings to MySQL with MITRE ATT&CK, CIS, and NIST mappings. Jinja2 report generator produces actionable Markdown remediation reports. The Assessment Engine evaluates The Fortress environment.
+
+### [The Watchtower](https://github.com/devonbookerrr/the-watchtower)
+Azure Sentinel detection lab monitoring The Fortress. Twelve custom analytic rules in YAML format mapped to MITRE ATT&CK - identity detections (impossible travel, MFA fatigue, privilege escalation outside PIM, CA policy modification) and Linux detections (SSH brute force, cron persistence, sudo escalation, new local user, AIDE integrity failure). KQL saved functions for reusable detection logic. Logic App playbooks for automated response: disable compromised accounts, revoke sessions, and notify SOC via Teams. The Watchtower monitors what The Fortress builds.
+
+---
 
 ## Stack
 
 ```
-Identity        Entra ID, Conditional Access, PIM, Graph API, Zero Trust
-Infrastructure  Azure VNets, NSGs, Key Vault, Policy, Monitor, Bicep
-Platform        Exchange Online, SharePoint, Intune, Defender Suite, DLP
-Automation      PowerShell, Python, Bash, SQL
-OS              Ubuntu Server 24.04, Rocky Linux
-Security        SIEM, Detection Engineering, MITRE ATT&CK, NIST, CIS
+Identity        Microsoft Entra ID  |  Conditional Access  |  PIM  |  Graph API  |  Zero Trust
+Infrastructure  Azure VNets  |  NSGs  |  Key Vault  |  Azure Policy  |  Log Analytics  |  Bicep
+Platform        Exchange Online  |  Intune  |  Defender for Office 365  |  DLP  |  SharePoint
+Automation      PowerShell (Graph SDK, Az module, ExchangeOnlineManagement)
+                Python (Azure SDK, FastAPI, Jinja2, mysql-connector)
+                Bash  |  MySQL 8.0  |  KQL
+OS              Ubuntu Server 24.04  |  Rocky Linux
+Security        SIEM  |  Detection Engineering  |  MITRE ATT&CK  |  NIST  |  CIS Benchmarks
 ```
+
+---
 
 ## Certifications
 
-CompTIA Security+ // CompTIA Network+ // CompTIA A+ // BTL1
+CompTIA Security+ &nbsp;|&nbsp; CompTIA Network+ &nbsp;|&nbsp; CompTIA A+ &nbsp;|&nbsp; BTL1
 
-## Links
+---
 
-[LinkedIn](https://linkedin.com/in/devonbookerr)
+## Background
+
+3+ years in cybersecurity across help desk, systems administration, and SOC roles. Led EDR deployment across 4,000+ endpoints and NIST SP 800-171 audits. Built 25+ custom SIEM detection rules with MITRE ATT&CK mapping. Currently working enterprise triage at Arctic Wolf while building toward cloud security engineering roles.
+
+---
+
+[LinkedIn](https://linkedin.com/in/devonbookerr) &nbsp;|&nbsp; San Antonio, TX
